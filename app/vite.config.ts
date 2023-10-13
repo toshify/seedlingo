@@ -1,6 +1,7 @@
 import { defineConfig, splitVendorChunkPlugin } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import { VitePWA } from 'vite-plugin-pwa';
+import legacy from '@vitejs/plugin-legacy';
 
 export default defineConfig({
   appType: 'spa',
@@ -41,6 +42,9 @@ export default defineConfig({
           '**/*.{js,css,html,ico,jpg,jpeg,png,gif,svg,mp3,audio,xml,txt}',
         ],
       },
+    }),
+    legacy({
+      targets: ['defaults', 'not IE 11', 'android 66'],
     }),
   ],
   define: {
