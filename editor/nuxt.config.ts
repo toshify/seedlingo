@@ -75,7 +75,7 @@ export default defineNuxtConfig({
         '@vue/devtools-core',
         '@vue/devtools-kit',
         'aws-amplify/auth',
-        'plausible-tracker',
+        '@plausible-analytics/tracker',
         'aws-amplify',
         '@ionic/vue',
         'ionicons',
